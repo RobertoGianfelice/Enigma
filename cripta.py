@@ -22,12 +22,13 @@ def impostaRotore(r,c):
     return (r)
 
 
-def giraRotore(scatti,r1,r2,r3):
+def giraRotore(scatti,passoR1,passoR2,r1,r2,r3):
     # Aziona il meccanismo di scatto partendo dal primo rotore ed eventualmente coinvolgendo gli altri
+    # utilizzando il periodo del primo e secondo rotore impostati dall'utente
     r1=scattoSingolo(r1)
-    if (scatti % len(r1)==0):
+    if (scatti % pR1==0):
         r2=scattoSingolo(r2)
-        if (scatti % (len(r1)^2)==0):
+        if (scatti % (passoR1*passoR2)==0):
             r3=scattoSingolo(r3)
     return(r1,r2,r3)
 
@@ -64,6 +65,8 @@ def setupScambi(scamb):
 
 r1,r2,r3=setupRotori(rotori)
 scamb=setupScambi(scamb)
+passoR1=int(input("inserisci il periodo del primo rotore: "))
+passoR2=int(input("inserisci il periodo del primo rotore: "))
 
 parolaInChiaro=input("Inserisci la parola da crittografare: ")
 scatti=0
@@ -77,5 +80,5 @@ for c in parolaInChiaro:
     else:
         print ( " ", end="")
     scatti+=1
-    r1,r2,r3=giraRotore(scatti,r1,r2,r3)
+    r1,r2,r3=giraRotore(scatti,passoR1,passoR2,r1,r2,r3)
 print()
