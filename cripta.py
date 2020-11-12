@@ -4,7 +4,10 @@ scamb=[]
 rot1= [3, 24, 0, 6, 7, 4, 12, 17, 11, 23, 21, 15, 18, 19, 16, 14, 1, 20, 8, 13, 5, 9, 25, 2, 10, 22]
 rot2= [7, 25, 20, 0, 12, 22, 8, 23, 5, 14, 11, 9, 16, 18, 2, 1, 3, 6, 10, 19, 21, 15, 13, 4, 24, 17]
 rot3= [17, 10, 1, 14, 8, 18, 19, 24, 6, 4, 25, 11, 20, 2, 9, 23, 16, 0, 12, 3, 5, 13, 7, 15, 22, 21]
-rotori=[rot1,rot2,rot3]
+rot4= [10, 1, 14, 8, 18, 19, 24, 6, 4, 25, 11, 20, 2, 9, 23, 16, 0, 12, 3, 5, 13, 7, 15, 22, 21,17]
+rot5= [17, 10, 1, 14, 8, 18, 19, 24, 6, 4, 25, 11, 20, 2, 9, 23, 16, 0, 12, 3, 5, 13, 7, 15, 22, 21]
+
+rotori=[rot1,rot2,rot3,rot4,rot5]
 rif=[2,3,0,1,5,4,7,6,9,8,11,10,13,12,15,14,17,16,19,18,21,20,23,22,25,24]
 
 def scattoSingolo(r):
@@ -26,7 +29,7 @@ def giraRotore(scatti,passoR1,passoR2,r1,r2,r3):
     # Aziona il meccanismo di scatto partendo dal primo rotore ed eventualmente coinvolgendo gli altri
     # utilizzando il periodo del primo e secondo rotore impostati dall'utente
     r1=scattoSingolo(r1)
-    if (scatti % pR1==0):
+    if (scatti % passoR1==0):
         r2=scattoSingolo(r2)
         if (scatti % (passoR1*passoR2)==0):
             r3=scattoSingolo(r3)
