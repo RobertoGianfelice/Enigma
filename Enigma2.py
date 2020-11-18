@@ -11,17 +11,6 @@ def scattoSingolo(r):
     return (r)
 
 
-def giraRotore(scatti,passoR1,passoR2,r1,r2,r3):
-    # Aziona il meccanismo di scatto partendo dal primo rotore ed eventualmente coinvolgendo gli altri
-    # utilizzando il periodo del primo e secondo rotore impostati dall'utente
-    r1=scattoSingolo(r1)
-    if (scatti % passoR1==0):
-        r2=scattoSingolo(r2)
-        if (scatti % (passoR1*passoR2)==0):
-            r3=scattoSingolo(r3)
-    return(r1,r2,r3)
-
-
 parolaInChiaro=input("Inserisci la parola da crittografare (in MAIUSCOLO): ")
 for c in parolaInChiaro:
     nacked=ord(c)-ord('A')
@@ -29,4 +18,5 @@ for c in parolaInChiaro:
     ritorno=r1.index(andata)
     coded=ritorno+ord('A')
     print( chr(coded), end="")
+    r=scattoSingolo(r)
 print()

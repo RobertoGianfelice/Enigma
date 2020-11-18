@@ -25,8 +25,6 @@ def giraRotore(scatti,r1,r2,r3):
 
 
 scatti=0
-
-
 parolaInChiaro=input("Inserisci la parola da crittografare (in MAIUSCOLO): ")
 for c in parolaInChiaro:
     nacked=ord(c)-ord('A')

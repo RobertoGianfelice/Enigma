@@ -27,7 +27,7 @@ def giraRotore(scatti,p1,p2,r1,r2,r3):
 scatti=0
 
 passoR1=int(input("inserisci il periodo del primo rotore: "))
-passoR2=int(input("inserisci il periodo del primo rotore: "))
+passoR2=int(input("inserisci il periodo del secondo rotore: "))
 
 parolaInChiaro=input("Inserisci la parola da crittografare (in MAIUSCOLO): ")
 for c in parolaInChiaro:
