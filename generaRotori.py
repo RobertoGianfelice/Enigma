@@ -1,3 +1,5 @@
+# Generatore di rotori da inserire nela macchina Enigma
+
 import random
 
 
