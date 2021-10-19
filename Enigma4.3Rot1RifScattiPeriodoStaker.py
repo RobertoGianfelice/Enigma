@@ -57,7 +57,7 @@ r3=rot3
 
 scamb=setupScambi(scamb)
 passoR1=int(input("inserisci il periodo del primo rotore: "))
-passoR2=int(input("inserisci il periodo del primo rotore: "))
+passoR2=int(input("inserisci il periodo del secondo rotore: "))
 
 parolaInChiaro=input("Inserisci la parola da crittografare: ")
 scatti=0
